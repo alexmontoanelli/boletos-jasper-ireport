@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bradesco" pageWidth="595" pageHeight="842" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="0" bottomMargin="0" uuid="40172893-e007-4474-b3f0-4873a5d1c1fd">
+	<property name="ireport.zoom" value="1.4641000000000093"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="12"/>
+	<field name="linha_digitavel" class="java.lang.String">
+		<fieldDescription><![CDATA[linha_digitavel]]></fieldDescription>
+	</field>
+	<field name="data_vencimento" class="java.lang.String">
+		<fieldDescription><![CDATA[data_vencimento]]></fieldDescription>
+	</field>
+	<field name="agencia_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[agencia_codigo]]></fieldDescription>
+	</field>
+	<field name="nosso_numero" class="java.lang.String">
+		<fieldDescription><![CDATA[nosso_numero]]></fieldDescription>
+	</field>
+	<field name="valor_boleto" class="java.lang.String">
+		<fieldDescription><![CDATA[valor_boleto]]></fieldDescription>
+	</field>
+	<field name="cedente" class="java.lang.String">
+		<fieldDescription><![CDATA[cedente]]></fieldDescription>
+	</field>
+	<field name="data_documento" class="java.lang.String">
+		<fieldDescription><![CDATA[data_documento]]></fieldDescription>
+	</field>
+	<field name="numero_documento" class="java.lang.String">
+		<fieldDescription><![CDATA[numero_documento]]></fieldDescription>
+	</field>
+	<field name="especie" class="java.lang.String">
+		<fieldDescription><![CDATA[especie]]></fieldDescription>
+	</field>
+	<field name="especie_doc" class="java.lang.String">
+		<fieldDescription><![CDATA[especie_doc]]></fieldDescription>
+	</field>
+	<field name="aceite" class="java.lang.String">
+		<fieldDescription><![CDATA[aceite]]></fieldDescription>
+	</field>
+	<field name="data_processamento" class="java.lang.String">
+		<fieldDescription><![CDATA[data_processamento]]></fieldDescription>
+	</field>
+	<field name="carteira" class="java.lang.String">
+		<fieldDescription><![CDATA[carteira]]></fieldDescription>
+	</field>
+	<field name="quantidade" class="java.lang.String">
+		<fieldDescription><![CDATA[quantidade]]></fieldDescription>
+	</field>
+	<field name="sacado" class="java.lang.String">
+		<fieldDescription><![CDATA[sacado]]></fieldDescription>
+	</field>
+	<field name="endereco1" class="java.lang.String">
+		<fieldDescription><![CDATA[endereco1]]></fieldDescription>
+	</field>
+	<field name="endereco2" class="java.lang.String">
+		<fieldDescription><![CDATA[endereco2]]></fieldDescription>
+	</field>
+	<field name="cpf_cnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[cpf_cnpj]]></fieldDescription>
+	</field>
+	<field name="codigo_barras" class="java.lang.String">
+		<fieldDescription><![CDATA[codigo_barras]]></fieldDescription>
+	</field>
+	<field name="codigo_banco_com_dv" class="java.lang.String">
+		<fieldDescription><![CDATA[codigo_banco_com_dv]]></fieldDescription>
+	</field>
+	<field name="instrucoes" class="java.lang.String">
+		<fieldDescription><![CDATA[instrucoes]]></fieldDescription>
+	</field>
+	<field name="field1" class="java.lang.String"/>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[logo]]></fieldDescription>
+	</field>
+	<field name="IS_DEV" class="java.lang.String">
+		<fieldDescription><![CDATA[IS_DEV]]></fieldDescription>
+	</field>
+	<field name="banconome" class="java.lang.String">
+		<fieldDescription><![CDATA[banconome]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="737" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="068b556d-0521-4eb5-864b-ecaa3e0670d3" x="244" y="20" width="198" height="707" forecolor="#CCCCCC">
+					<printWhenExpression><![CDATA[$F{IS_DEV}.equalsIgnoreCase("S")]]></printWhenExpression>
+				</reportElement>
+				<textElement rotation="Right">
+					<font size="148"/>
+				</textElement>
+				<text><![CDATA[MODELO]]></text>
+			</staticText>
+			<elementGroup>
+				<staticText>
+					<reportElement uuid="dc6f96c4-6a77-4532-b4ee-7fa43dde220b" x="6" y="61" width="68" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[DATA DO DOCUMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="44c3d41a-b970-4199-9e0e-80db1e25314e" x="74" y="81" width="29" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[CARTEIRA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="eae97854-d7f1-4e5f-b7dc-84c5cd300e1b" x="513" y="201" width="61" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Autenticação mecânica]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="3f30adb0-0c19-4bea-b825-5244f8e83a1e" x="99" y="7" width="38" height="13"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{codigo_banco_com_dv}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="807a16cb-4181-4007-bd95-d60c072b2b7b" x="428" y="21" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[VENCIMENTO]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="8794c430-5326-43f5-af20-c1b1def11ef9" x="5" y="2" width="91" height="16"/>
+					<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="2b8f1a9e-6274-4f60-8b0e-ac49317e0042" x="428" y="61" width="143" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[NOSSO NÚMERO]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="617e425b-6cea-4864-8e25-9e6aa1c3e34f" x="421" y="178" width="154" height="1"/>
+				</line>
+				<staticText>
+					<reportElement uuid="6a856e08-1c5f-4f35-a2b6-089bb312f442" x="428" y="120" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(-) OUTRAS DEDUÇÕES]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="7d3e2a67-fd5e-44fe-a913-eb2c0d02addf" x="179" y="70" width="40" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aceite}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="d10f41d3-092a-4004-8dc9-bb8b4c63d342" x="137" y="4" width="1" height="15"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="b8863118-ed21-4605-a510-8280b25827eb" x="314" y="159" width="261" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="2f1efa45-e51d-4ec0-b116-503e70431bc7" x="7" y="69" width="65" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{data_documento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="2f588bc1-5a50-4fcc-ae6c-a218ca3b0fe6" x="180" y="61" width="22" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ACEITE]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="6ebc84ae-1bb0-4f16-8160-baa9c507c98a" x="178" y="60" width="1" height="19"/>
+				</line>
+				<staticText>
+					<reportElement uuid="b98d7d5b-b390-4fe2-a0b2-116aa9bffc46" x="7" y="160" width="48" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[SACADO]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="e3630341-5333-4f26-981e-5dd0b4eb40fa" x="428" y="48" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{agencia_codigo}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="cafe147c-90f4-4d5f-9e5a-d7c5f255e9b8" x="5" y="19" width="570" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.2"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="3f282e8e-40e7-45c6-a45b-e325ea45439a" x="9" y="177" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{endereco1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="7528bd0b-baaf-4e83-9fc9-eb4c931cd617" x="73" y="90" width="35" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{carteira}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="e79dff1d-50fb-4132-b0d3-bf097e6f5fb3" x="7" y="41" width="300" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[CEDENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="664b9e12-7a28-4ea8-a067-5e7460654282" x="221" y="81" width="70" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[VALOR]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="2f130a92-29cb-4178-a05c-18ae336aa72d" x="5" y="79" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="01c03566-d9f4-4fad-a060-3c00177d93b6" x="7" y="102" width="40" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[INSTRUÇÕES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="fad027ab-13f5-4f4f-a8bc-1ce4662d197e" x="7" y="31" width="209" height="9"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[Pagável em qualquer banco até o vencimento]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="07220c90-8520-4ee4-89e9-2928685d9757" x="72" y="60" width="1" height="19"/>
+				</line>
+				<textField>
+					<reportElement uuid="d7111d0a-b9e4-43a3-a794-6758454a8689" x="428" y="69" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nosso_numero}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="01512763-896e-4dad-843f-9ce1ea29d477" x="74" y="69" width="64" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numero_documento}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="f43f7210-3459-4085-aa83-b8961c593577" x="421" y="20" width="1" height="178"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="7d6653b6-a928-4c47-a86f-091663145b4e" x="7" y="81" width="48" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[USO DO BANCO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a3f9261b-4bfd-4024-a226-05560b4a9277" x="428" y="81" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(=) VALOR DO DOCUMENTO]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="86480745-65ed-4898-aba3-9b212bf617d0" x="7" y="50" width="299" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cedente}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="8ca81b6f-ff05-4bad-8177-532df16d0667" x="72" y="80" width="1" height="20"/>
+				</line>
+				<staticText>
+					<reportElement uuid="8a1ce609-b16d-4501-88c2-be3b0e498ba8" x="428" y="161" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(+) OUTROS ACRÉSCIMOS]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="8e141fc0-8f51-490d-b645-5aec1723d295" x="219" y="60" width="1" height="40"/>
+				</line>
+				<textField>
+					<reportElement uuid="3d7e2d39-413b-4d9e-a8e2-a779533ec1b6" x="108" y="90" width="31" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{especie}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="581ac7b3-ac7f-41d6-8ecb-ed32b6275d98" x="314" y="191" width="100" height="8"/>
+					<textElement textAlignment="Right">
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Cód. Baixa]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="567f1a27-4ed4-411d-9b19-c3f00b0cbb04" x="421" y="119" width="154" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="82605e24-f4bd-4fca-b1e2-f8cd07d7a39f" x="229" y="90" width="82" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valor_boleto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="e361995f-a47e-47e0-a816-5568f089535a" x="463" y="30" width="107" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{data_vencimento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="1d024956-92b6-4482-ae81-5b6a9a7b17cd" x="428" y="102" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(-) DESCONTO/ABATIMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="31564741-a9f1-46d7-afa9-71e046f671ac" x="428" y="41" width="143" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[AGÊNCIA/CÓDIGO DO CEDENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="d8fec820-384b-4da2-8863-9fa5fb738d9f" x="109" y="81" width="24" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ESPÉCIE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="73cd9fc6-5502-4527-ac21-0f21f0a4bfde" x="7" y="21" width="300" height="7"/>
+					<textElement>
+						<font size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[LOCAL DO PAGAMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ec087612-c219-4fba-8123-0c9829414c41" x="141" y="81" width="42" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[QUANTIDADE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="b6c5593a-ff78-4dc5-b2f0-482e3603eb63" x="428" y="141" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(+) MORA/MULTA]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="531930d3-ff4e-446d-bc2e-f139927536f3" x="5" y="198" width="570" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="9c722080-f7f2-419c-bbd3-07a2948840d9" x="5" y="100" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="15290661-a34a-4fbb-a3b9-45415dfc7ff0" x="5" y="59" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="32d878dc-9b28-494f-8259-f1d679eb3b44" x="221" y="61" width="88" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[DATA DO PROCESSAMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="8aec70b7-a5bb-4906-944d-4a7bb27082e9" x="428" y="179" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(=) VALOR COBRADO]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="1e463095-b910-4aff-896b-676b21c1de76" x="313" y="198" width="261" height="1"/>
+				</line>
+				<line>
+					<reportElement uuid="608f463d-8626-43c5-acbd-3981ff12ec4f" x="96" y="4" width="1" height="15"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="1c93b48e-2521-40a1-bf21-ef8d4377a454" x="107" y="80" width="1" height="21"/>
+				</line>
+				<line>
+					<reportElement uuid="79f59a31-04dd-4d58-826d-3ce842fada1d" x="139" y="60" width="1" height="40"/>
+				</line>
+				<line>
+					<reportElement uuid="e9b3de97-5b68-438a-8b40-6b178c33e826" x="6" y="159" width="568" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="9d1cab7e-1317-4ff2-8243-5fc84a94c556" x="194" y="7" width="378" height="15" isPrintWhenDetailOverflows="true"/>
+					<textElement textAlignment="Right">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Ficha de Caixa"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="32204ae5-8144-48f2-a4fa-93585ea10b02" x="9" y="186" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{endereco2} + " | CPF/CNPJ: " + $F{cpf_cnpj}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="0c7369d8-ac1a-4998-a354-0b2f29c68225" x="421" y="139" width="154" height="1"/>
+				</line>
+				<staticText>
+					<reportElement uuid="f6999551-39ce-4261-aac4-dd95e39758e4" x="74" y="61" width="54" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[N. DO DOCUMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="c27c17ef-4865-416c-9a89-252682e365ce" x="141" y="61" width="37" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ESPÉCIE DOC.]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="10d275bb-756e-4165-ae6a-04d9b5926eb8" x="6" y="39" width="568" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="e11d4683-2219-4a56-899e-6b64ae5abe3a" x="428" y="90" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valor_boleto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="ae875d3a-5bf3-493f-8363-29d8be6c6395" x="9" y="168" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sacado}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="b5fcbd5b-dc74-4d82-9365-4e5af331e520" x="2" y="222" width="573" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="91c576c0-e91a-4d33-b920-1149b7513b9b" x="140" y="70" width="40" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{especie_doc}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="b186b464-7ff5-48d6-bfa7-4a304efd6fcb" x="141" y="90" width="75" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement uuid="107c57d2-0734-4691-a15f-f0afead7890e" x="6" y="294" width="68" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[DATA DO DOCUMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="dda7daa4-fc3c-4e7c-9064-52280570470c" x="74" y="314" width="29" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[CARTEIRA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="2dc15a62-ebba-46ca-8274-4771a73d6751" x="513" y="434" width="61" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Autenticação mecânica]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="e91f42ac-f5e2-4a52-ab03-56a7af3e8b9a" x="99" y="240" width="38" height="13"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{codigo_banco_com_dv}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="8e8cef41-26fb-49d5-8c04-79cd95aab1af" x="428" y="254" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[VENCIMENTO]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="b7eb8f1f-1d87-422e-bbca-e07e340dc555" x="5" y="235" width="91" height="16"/>
+					<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="1dd94524-c7c9-4fd8-a1d7-41e06a1c3e5b" x="428" y="294" width="143" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[NOSSO NÚMERO]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="4601e42b-9152-4f21-b2b6-61017888fbbf" x="421" y="411" width="154" height="1"/>
+				</line>
+				<staticText>
+					<reportElement uuid="bad31dc6-d5f0-4857-9356-9e6a932d1221" x="428" y="353" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(-) OUTRAS DEDUÇÕES]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="f1723622-c478-420f-9303-334ed1faccba" x="179" y="303" width="40" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aceite}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="db486f73-fe28-4b46-a02a-0f10a94bc2a1" x="137" y="237" width="1" height="15"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="4de681fe-91f3-4ee1-afda-696507682ca6" x="314" y="392" width="261" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="2175ad38-88c7-438b-b5c0-5ad0bdb17f56" x="7" y="302" width="65" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{data_documento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="338bf351-9ec4-4242-9b11-583f012ddbf5" x="180" y="294" width="22" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ACEITE]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="1b5ff156-ff0d-41bf-836f-c1fe050f0ef3" x="178" y="293" width="1" height="19"/>
+				</line>
+				<staticText>
+					<reportElement uuid="7082ea95-8882-451a-878e-b2a1aa3c3bdf" x="7" y="393" width="48" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[SACADO]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="1bba37c1-c451-446d-8955-7f0a7523cf36" x="428" y="281" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{agencia_codigo}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="5e52d269-c67c-4c5b-9957-ee46bfde03cc" x="5" y="252" width="570" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.2"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="607775db-b761-4380-a570-4c3f5e8e12ba" x="9" y="410" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{endereco1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="4d3d840e-bf21-4ca4-9975-6f6ebf19d5b7" x="73" y="323" width="35" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{carteira}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="df541c42-7ab0-48a3-919e-b5d3b72402ea" x="7" y="274" width="300" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[CEDENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a4e71908-1d8b-46da-8a5f-4b6ea5713908" x="221" y="314" width="70" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[VALOR]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="52107f2b-0a3d-4f00-904e-aa57a5b33c7d" x="5" y="312" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="6d9eceaf-63ab-4073-914a-870068a7e85e" x="7" y="335" width="40" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[INSTRUÇÕES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="8f4d73c0-4d64-434a-b85c-26d1434ca24d" x="7" y="264" width="209" height="9"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[Pagável em qualquer banco até o vencimento]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="74243eba-11a2-4805-ab54-e459a897bf6f" x="72" y="293" width="1" height="19"/>
+				</line>
+				<textField>
+					<reportElement uuid="61b5a441-b6f9-428d-b8b1-8f4243362614" x="428" y="302" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nosso_numero}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="4da94057-577f-4776-8b65-378d19c44c67" x="74" y="302" width="64" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numero_documento}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="850b3202-8432-4d3f-8113-3b145bfead83" x="421" y="253" width="1" height="178"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="411a5bee-496e-4e2d-8d5f-1d61eaa63510" x="7" y="314" width="48" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[USO DO BANCO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="0cb1f6d2-e23e-43a0-b912-083dfb450d7b" x="428" y="314" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(=) VALOR DO DOCUMENTO]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="39eba904-1f3d-43c8-8b06-3bc4d9e713ac" x="7" y="283" width="299" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cedente}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="2e6d9ac5-1527-4fb1-a194-f3e03fd4407c" x="72" y="313" width="1" height="20"/>
+				</line>
+				<staticText>
+					<reportElement uuid="dbaa2895-91c2-4f03-bf2f-fa3913982c9a" x="428" y="394" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(+) OUTROS ACRÉSCIMOS]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="db9c554c-77a5-4198-93c6-cec15c95a4e0" x="219" y="293" width="1" height="40"/>
+				</line>
+				<textField>
+					<reportElement uuid="5e08e4a3-5a83-4e12-b524-4e99498decce" x="108" y="323" width="31" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{especie}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="6d22aa94-cd9e-48c9-a621-137ab94bf82c" x="314" y="424" width="100" height="8"/>
+					<textElement textAlignment="Right">
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Cód. Baixa]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="3823826d-ddea-4bdf-b299-90a2f4d998e0" x="421" y="352" width="154" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="fe58480a-24e1-4cc8-9a93-044bfc70d52b" x="229" y="323" width="82" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valor_boleto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="155387eb-ed11-46f1-9144-479ca27f0a8b" x="463" y="263" width="107" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{data_vencimento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="8682e38e-8cfe-4c16-98bf-c06ef9e2031d" x="428" y="335" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(-) DESCONTO/ABATIMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="2d1599b4-3e20-4028-8cea-3199e386ca3c" x="428" y="274" width="143" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[AGÊNCIA/CÓDIGO DO CEDENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="35374713-d4d2-4d90-bebe-7fca98ce0e16" x="109" y="314" width="24" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ESPÉCIE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a883d895-e276-475d-b191-4c4a1804893c" x="7" y="254" width="300" height="7"/>
+					<textElement>
+						<font size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[LOCAL DO PAGAMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="fd385d7e-9602-401f-a89a-dcc7e0ea0579" x="141" y="314" width="42" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[QUANTIDADE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="2ee8a0bb-f54c-4a50-98d2-53c10d7b9f6a" x="428" y="374" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(+) MORA/MULTA]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="a375a501-e903-4be5-9671-76beb6013864" x="5" y="431" width="570" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="7d161da2-76bc-4fd6-ae37-8e979115db57" x="5" y="333" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="468bb677-035a-4481-b1a6-b95470a8663d" x="5" y="292" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="1fe979eb-b0ad-4066-92ef-7ce8e30635ea" x="221" y="294" width="88" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[DATA DO PROCESSAMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="c9a41a71-d1d8-4093-bac4-ffacd85df1ff" x="428" y="412" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(=) VALOR COBRADO]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="67e7560a-7872-47c0-adaf-a5c4055e15d3" x="313" y="431" width="261" height="1"/>
+				</line>
+				<line>
+					<reportElement uuid="4882c4b6-8388-43de-bd92-ef0dc1608627" x="96" y="237" width="1" height="15"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="8381a730-42c0-4598-9ea9-81dd3699e296" x="107" y="313" width="1" height="21"/>
+				</line>
+				<line>
+					<reportElement uuid="b7f3a389-8c93-4e19-9928-c7301963ac3b" x="139" y="293" width="1" height="40"/>
+				</line>
+				<line>
+					<reportElement uuid="9949c182-785a-48e4-be8f-97b8eddb3595" x="6" y="392" width="568" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="a012ff54-0eb0-4b2e-b38b-881385f398f7" x="194" y="240" width="378" height="15" isPrintWhenDetailOverflows="true"/>
+					<textElement textAlignment="Right">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Recibo de Pagador"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="43bb3adb-9933-4a34-8708-eb3032dfcd77" x="9" y="419" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{endereco2} + " | CPF/CNPJ: " + $F{cpf_cnpj}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="c2786b98-4037-4189-b8dd-745b2affb6ce" x="421" y="372" width="154" height="1"/>
+				</line>
+				<staticText>
+					<reportElement uuid="fbeb3fa4-8243-4e5a-91c7-2b7684cc7e70" x="74" y="294" width="54" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[N. DO DOCUMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="d669c41f-b367-427b-8f0e-25ec30d000c0" x="141" y="294" width="37" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ESPÉCIE DOC.]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="8f063b0d-66c3-4716-8560-4701dc97fe85" x="6" y="272" width="568" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="cb907b86-1e23-429f-8464-26f88d380eeb" x="428" y="323" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valor_boleto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="945d7bbd-501d-43e5-8327-51cf92b3b56f" x="9" y="401" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sacado}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="a9b782a0-2f56-48cb-9f85-24bcca209254" x="2" y="453" width="573" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="bd2eabac-f128-48a2-b4e2-038e5065e741" x="140" y="303" width="40" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{especie_doc}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="4ca7b1ea-8afe-40ff-ad39-03d11c35b10d" x="141" y="323" width="75" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement uuid="8cf65ba4-8583-4ecd-b5be-a10407f73792" x="6" y="523" width="68" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[DATA DO DOCUMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="be42691e-9f25-49d3-a389-d330569a34d3" x="74" y="543" width="29" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[CARTEIRA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="32426e90-df16-429d-82d3-61776a3e3729" x="509" y="664" width="63" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Autenticação mecânica]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="07f725bd-4083-499a-b53c-d4df21d54a78" x="99" y="469" width="38" height="13"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{codigo_banco_com_dv}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="28870f87-38e5-4257-acdb-3ffb0c0a2e31" x="428" y="483" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[VENCIMENTO]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="c6e42693-c3ad-4329-9314-561e7cc0947a" x="5" y="464" width="91" height="16"/>
+					<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="35ebfb4e-c027-41b3-a1ae-4eecb7eeb200" x="428" y="523" width="143" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[NOSSO NÚMERO]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="f6c8cc5e-7076-4948-bcb4-6788e6beb334" x="421" y="640" width="154" height="1"/>
+				</line>
+				<staticText>
+					<reportElement uuid="fdb7f771-ffc8-4d77-a65b-71f51ef3bab0" x="428" y="582" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(-) OUTRAS DEDUÇÕES]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="3d7a753c-c62a-4143-bea2-cf6d25aee1e8" x="179" y="532" width="40" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aceite}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="6aa92142-8017-45b5-9e86-627e4a597b6d" x="137" y="466" width="1" height="15"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="55956149-4a34-43c4-8221-35305a8ccabf" x="314" y="621" width="261" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="e1c7cf2d-41b0-46d4-8963-02b29b4a47ef" x="7" y="531" width="65" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{data_documento}]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement uuid="826e00d4-176e-4a93-8577-5f15ad3c2221" x="17" y="679" width="404" height="39"/>
+					<jr:Interleaved2Of5 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" textPosition="none" displayChecksum="false">
+						<jr:codeExpression><![CDATA[$F{codigo_barras}]]></jr:codeExpression>
+					</jr:Interleaved2Of5>
+				</componentElement>
+				<staticText>
+					<reportElement uuid="e48f895c-0e9b-4a23-bcee-ce0c4f2483cb" x="180" y="523" width="22" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ACEITE]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="04d258a5-cfe1-4c83-b5bf-6f7e0f294725" x="178" y="522" width="1" height="19"/>
+				</line>
+				<staticText>
+					<reportElement uuid="b022a124-21e7-43d9-977a-ff5874476bdb" x="7" y="622" width="48" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[SACADO]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="03077ae8-2dc1-45dc-aabf-b3b73ef93c32" x="428" y="510" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{agencia_codigo}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="5906a1b2-b6cb-48e8-9343-57db36f60594" x="5" y="481" width="570" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.2"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="4e629949-1612-44c1-8f04-e3c5b612a0ba" x="9" y="639" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{endereco1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="7be81fa1-0528-417a-9d6d-2f34c900647c" x="73" y="552" width="35" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{carteira}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="394fb01a-3e97-4ff5-83a1-33c301afb6fb" x="7" y="503" width="300" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[CEDENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="b63b1627-6ec0-4a16-ab19-a7b1143c7363" x="221" y="543" width="70" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[VALOR]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="1ebc734c-b756-4241-85a6-b8cf9aaf6d99" x="5" y="541" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="8946a012-19f4-4fc3-91db-53ff1d2aa862" x="7" y="564" width="40" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[INSTRUÇÕES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="4311b39b-182d-4b8e-b2f0-7f10626e8d0c" x="7" y="493" width="209" height="9"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[Pagável em qualquer banco até o vencimento]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="537fac37-785f-4819-9658-8dbab397e03b" x="72" y="522" width="1" height="19"/>
+				</line>
+				<textField>
+					<reportElement uuid="8d24786f-a08c-4bb1-93be-c471eccb2551" x="428" y="531" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nosso_numero}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="965dfaa4-1c16-4efb-b777-9327b9dcc8a5" x="74" y="531" width="64" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numero_documento}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="48c1c343-1f63-46e0-9ae7-20f551395700" x="421" y="482" width="1" height="178"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="05e640ce-0920-4269-a462-f07a66135e25" x="7" y="543" width="48" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[USO DO BANCO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="876a0584-69ef-45ad-9181-2cc233433cc7" x="428" y="543" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(=) VALOR DO DOCUMENTO]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="41170a92-bd03-4569-96a0-ec9a726084cb" x="7" y="512" width="299" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cedente}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="3b91cae0-b702-48b9-bf92-3d14a029230e" x="72" y="542" width="1" height="20"/>
+				</line>
+				<staticText>
+					<reportElement uuid="5e7a8ba4-f25a-4682-a6b6-66dc73d63fc7" x="428" y="623" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(+) OUTROS ACRÉSCIMOS]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="3536af3e-40ca-410f-a743-1765b99b6dd2" x="219" y="522" width="1" height="40"/>
+				</line>
+				<textField>
+					<reportElement uuid="17ab8fe9-a7f2-4bcf-aea6-e6307fc7f7b1" x="108" y="552" width="31" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{especie}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="be34f2d9-2a1c-49b8-99fa-892937dcfa39" x="314" y="652" width="100" height="8"/>
+					<textElement textAlignment="Right">
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Cód. Baixa]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="2464ff2e-3396-4e0e-b343-f66e32f8b3f9" x="421" y="581" width="154" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="2cfbde79-4382-49b7-89fc-00a4bf2f454b" x="229" y="552" width="82" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valor_boleto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="fef080ec-a839-4b38-9d5f-7c4e8eacb9cb" x="463" y="492" width="107" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{data_vencimento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="6220d4bf-a247-4b1e-a0cb-64db8842a582" x="428" y="564" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(-) DESCONTO/ABATIMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="f18d6f27-37e7-4f86-84b0-f9663a49d87b" x="428" y="503" width="143" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[AGÊNCIA/CÓDIGO DO CEDENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ed4e13ed-b48b-420c-9bec-06f62b91ce5e" x="109" y="543" width="24" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ESPÉCIE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="3ea60fd7-adde-4938-9f86-f58486bbc6b3" x="7" y="483" width="300" height="7"/>
+					<textElement>
+						<font size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[LOCAL DO PAGAMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="f49c70e6-e390-4ccd-b5b2-24f16f0e8c26" x="141" y="543" width="42" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[QUANTIDADE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="75cc0b3b-60ce-46a3-b96c-e88c15921a8f" x="428" y="603" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(+) MORA/MULTA]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="bfb89c3e-be83-473b-aeab-6a79b51d9a62" x="5" y="660" width="570" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="ee3421ec-bf58-42de-8ef2-1cdb90636a7a" x="5" y="562" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.25"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="17134dc2-3b57-406a-ba04-bff4d961e8f8" x="5" y="521" width="569" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="10c3d055-3ac5-45d4-82ac-96b8e68f7870" x="221" y="523" width="88" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[DATA DO PROCESSAMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="d7a3a60d-073e-44b9-9cb1-c1d88eb17bf0" x="428" y="641" width="133" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[(=) VALOR COBRADO]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="4e350a7b-0c57-466f-b9a0-8859201f12be" x="313" y="660" width="261" height="1"/>
+				</line>
+				<line>
+					<reportElement uuid="7418b3d8-48cc-4ac7-bf01-01f344dc0c63" x="96" y="466" width="1" height="15"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="63508998-1ac2-4d9b-841b-1b6da34e6af2" x="107" y="542" width="1" height="21"/>
+				</line>
+				<line>
+					<reportElement uuid="4d989f94-2091-4222-b7f0-d72ab5c94686" x="139" y="522" width="1" height="40"/>
+				</line>
+				<line>
+					<reportElement uuid="84bcdcd9-d8f3-45ea-b821-a46e345e6d65" x="6" y="621" width="568" height="1"/>
+				</line>
+				<textField>
+					<reportElement uuid="92bb8089-bacc-43ef-9763-f9366dd1a173" x="140" y="469" width="434" height="15" isPrintWhenDetailOverflows="true"/>
+					<textElement textAlignment="Right">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{linha_digitavel}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="f2566512-d91f-4d06-81f3-e0b075b508c7" x="9" y="648" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{endereco2} + " | CPF/CNPJ: " + $F{cpf_cnpj}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="ad39d131-73ef-4527-88ca-56a3b6e72145" x="421" y="601" width="154" height="1"/>
+				</line>
+				<staticText>
+					<reportElement uuid="6f923870-4c0f-4a44-929d-f8a2b359acdb" x="74" y="523" width="54" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[N. DO DOCUMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="dca09699-f627-4174-adea-d1f8ee5c8320" x="141" y="523" width="37" height="8"/>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[ESPÉCIE DOC.]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="45355c91-5373-4620-b8bc-d2dbfc9381ab" x="6" y="501" width="568" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="4db54e0a-91a8-4b5e-8a62-60660e85607c" x="428" y="552" width="143" height="10"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valor_boleto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="f53fd9f6-1a9f-4d6e-b1f7-02fd0d2cef05" x="9" y="630" width="298" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sacado}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="0c3687ea-b048-458a-89ad-747b0e9594ed" x="2" y="727" width="573" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="c5b3a611-095d-400d-9fce-1a2a35e41d48" x="140" y="532" width="40" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{especie_doc}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="e963b994-1819-492b-9a65-27b7ff90d83d" x="141" y="552" width="75" height="10"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<textField>
+				<reportElement uuid="40c3008f-cba5-441b-b17a-22f7aeb1f28d" x="9" y="343" width="405" height="51"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{instrucoes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f3bd85-144c-4793-83aa-fbba6eabc88e" x="9" y="571" width="405" height="51"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{instrucoes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="380b03a4-d002-4f02-92eb-a5f8c11bf414" x="11" y="110" width="405" height="51"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{instrucoes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="74149b05-1cbd-4a9f-9fb3-a448ce1baab7" x="229" y="302" width="134" height="20"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_processamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a453e8cb-f9ba-4111-879f-7fd10ec57655" x="229" y="69" width="134" height="20"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_processamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f13c3d0d-75a1-42a7-bf18-04ffdc03ce84" x="229" y="532" width="134" height="20"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_processamento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
